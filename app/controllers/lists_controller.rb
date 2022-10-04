@@ -4,13 +4,14 @@ class ListsController < ApplicationController
   end
 
  def create
-   @list = List.new(list_params)
+  @list = List.new(list_params)
    if @list.save
-    redirect_to list_path(@list.id)
-   else
-    render :new
-   end  
- end
+   flash[:notice] = "投稿が成功しました"
+   redirect_to todolist_path(@list.id)
+   render :new
+   end
+   end
+ 
 
 
   def index
@@ -18,7 +19,7 @@ class ListsController < ApplicationController
   end
 
   def show
-    @list=List.find(params[:id])
+    @list= List.find(params[:id])
   end
 
   def edit
