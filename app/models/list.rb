@@ -4,8 +4,8 @@ class List < ApplicationRecord
   validates :title,presence: true
   validates :body,presence: true
   
-  #コメントアウトする
-  #validates :image,presence: true
+  #rails cを起動するときはコメントアウトする
+  validates :image,presence: true
   
   
 end
