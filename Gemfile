@@ -60,3 +60,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 #10/3 0935 ActiveStorageをインストールする為
 gem 'net-smtp'
+
+gem 'dotenv-rails'
